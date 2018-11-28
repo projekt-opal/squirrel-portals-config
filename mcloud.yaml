@@ -20,6 +20,8 @@ file_descriptor:
     "dcat:theme": l(http://projekt-opal.de/theme/$label)
     "http://purl.org/dc/terms/publisher": l(http://projekt-opal.de/agent/$label)
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": l(http://www.w3.org/ns/dcat#Dataset)
+    "dcat:landingPage": l($uri)
+    "dcat:Catalog": l(mcloud.de)
 
     "http://projekt-opal.de/agent/$label":
      "http://xmlns.com/foaf/0.1/name": div.detail-card p .tag-date a
@@ -34,3 +36,7 @@ file_descriptor:
      "http://www.w3.org/ns/dcat#accessURL*": .download-list a:contains(wms),a:contains(wfs),a:contains(FTP)
      "http://purl.org/dc/terms/license": div.detail-card p:last-of-type a
      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": l(http://www.w3.org/ns/dcat#Distribution)
+
+
+     
+        
