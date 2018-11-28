@@ -16,7 +16,7 @@ file_descriptor:
     "http://purl.org/dc/terms/description": .notes p
     "dcat:distribution": l(http://europeandataportal.projekt-opal.de/distribution/$label*)
     "http://purl.org/dc/terms/issued": table tr:contains(Created) td
-    "http://purl.org/dc/terms/theme": l(http://europeandataportal.projekt-opal.de/theme-$label)
+    "dcat:theme": l(http://europeandataportal.projekt-opal.de/theme-$label)
     "http://purl.org/dc/terms/publisher": l(http://europeandataportal.projekt-opal.de/agent/$label)
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": l(http://www.w3.org/ns/dcat#Dataset)
 
