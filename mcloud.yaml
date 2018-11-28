@@ -17,7 +17,7 @@ file_descriptor:
     "http://purl.org/dc/terms/description": .main-text
     "dcat:distribution": l(http://mcloud.projekt-opal.de/distribution/$label*)
     "http://purl.org/dc/terms/issued": div.detail-card p:nth-of-type(2) span
-    "http://purl.org/dc/terms/theme": l(http://mcloud.projekt-opal.de/theme/$label)
+    "dcat:theme": l(http://mcloud.projekt-opal.de/theme/$label)
     "http://purl.org/dc/terms/publisher": l(http://mcloud.projekt-opal.de/agent/$label)
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": l(http://www.w3.org/ns/dcat#Dataset)
 
