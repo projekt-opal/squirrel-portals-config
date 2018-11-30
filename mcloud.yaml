@@ -2,6 +2,31 @@ file_descriptor:
  check:
   domain: mcloud.de
   ignore-request: true
+  static-resources:
+   "Klima und Wetter":
+     http://projeckt-opal.de/theme/mcloud/climateAndWeather:
+      rdf:type: skos:Concept
+      rdfs:label: Klima und Wetter
+   "Bahn":
+     http://projeckt-opal.de/theme/mcloud/train:
+      rdf:type: skos:Concept
+      rdfs:label: Bahn
+   "Straßen":
+     http://projeckt-opal.de/theme/mcloud/street:
+      rdf:type: skos:Concept
+      rdfs:label: Straßen
+   "Wasserstraßen und Gewässer":
+     http://projeckt-opal.de/theme/mcloud/waterwaysAndWaters:
+      rdf:type: skos:Concept
+      rdfs:label: Wasserstraßen und Gewässer
+   "Luft- und Raumfahrt":
+     http://projeckt-opal.de/theme/mcloud/aerospace:
+      rdf:type: skos:Concept
+      rdfs:label: Luft- und Raumfahrt
+   "Luft- und Raumfahrt":
+     http://projeckt-opal.de/theme/mcloud/infrastructure:
+      rdf:type: skos:Concept
+      rdfs:label: Infrastruktur
  search-result-page:
   regex:
    - results/searchAction
@@ -28,7 +53,7 @@ file_descriptor:
      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": l(http://xmlns.com/foaf/0.1/Agent)
 
     "http://projekt-opal.de/theme/$label":
-     "http://www.w3.org/2004/02/skos/core#prefLabel": .detail-card span:eq(2)
+     "http://www.w3.org/2004/02/skos/core#prefLabel": res(.detail-card span:eq(2))
      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": l(http://www.w3.org/2004/02/skos/core#Concept)
 
     "http://projekt-opal.de/distribution/$label": 
@@ -36,7 +61,3 @@ file_descriptor:
      "http://www.w3.org/ns/dcat#accessURL*": .download-list a:contains(wms),a:contains(wfs),a:contains(FTP)
      "http://purl.org/dc/terms/license": div.detail-card p:last-of-type a
      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": l(http://www.w3.org/ns/dcat#Distribution)
-
-
-     
-        
