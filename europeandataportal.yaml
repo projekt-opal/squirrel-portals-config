@@ -1,35 +1,94 @@
 file_descriptor:
  check:
   domain: europeandataportal.eu
-  ignore-request: false
+  ignore-request: true
+  static-resources:
+   "Environment":
+     http://projeckt-opal.de/theme/europeandataportal/environment:
+      http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
+      https://www.w3.org/2000/01/rdf-schema#label: Environment
+   "Regions and cities":
+     http://projeckt-opal.de/theme/europeandataportal/regionsandcities:
+      http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
+      https://www.w3.org/2000/01/rdf-schema#label: Regions and cities
+   "Government and public sector":
+     http://projeckt-opal.de/theme/europeandataportal/government:
+      http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
+      https://www.w3.org/2000/01/rdf-schema#label: Government and public sector
+   "Population and society":
+     http://projeckt-opal.de/theme/europeandataportal/populationandsociety:
+      http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
+      https://www.w3.org/2000/01/rdf-schema#label: Population and society
+   "Economy and finance":
+     http://projeckt-opal.de/theme/europeandataportal/economy:
+      http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
+      https://www.w3.org/2000/01/rdf-schema#label: Economy and finance
+   "Education, culture and sport":
+     http://projeckt-opal.de/theme/europeandataportal/education:
+      http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
+      https://www.w3.org/2000/01/rdf-schema#label: Education, culture and sport
+   "Health":
+     http://projeckt-opal.de/theme/europeandataportal/health:
+      http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
+      https://www.w3.org/2000/01/rdf-schema#label: Health
+   "Science and technology":
+     http://projeckt-opal.de/theme/europeandataportal/scienceandtechnology:
+      http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
+      https://www.w3.org/2000/01/rdf-schema#label: Science and technology
+   "Transport":
+     http://projeckt-opal.de/theme/europeandataportal/transport:
+      http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
+      https://www.w3.org/2000/01/rdf-schema#label: Transport
+   "Agriculture, fisheries, forestry and food":
+     http://projeckt-opal.de/theme/europeandataportal/agriculture:
+      http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
+      https://www.w3.org/2000/01/rdf-schema#label: Agriculture, fisheries, forestry and food
+   "Justice, legal system and public safety":
+     http://projeckt-opal.de/theme/europeandataportal/justice:
+      http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
+      https://www.w3.org/2000/01/rdf-schema#label: Justice, legal system and public safety
+   "Energy":
+     http://projeckt-opal.de/theme/europeandataportal/energy:
+      http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
+      https://www.w3.org/2000/01/rdf-schema#label: Energy
+   "International issues":
+     http://projeckt-opal.de/theme/europeandataportal/international:
+      http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
+      https://www.w3.org/2000/01/rdf-schema#label: International issues
+
  search-result-page:
   regex: dataset?q=
   resources: 
    "$uri":
-    "http://sindice.com/vocab/search#link": .dataset-list h3 a
-    "http://sindice.com/vocab/search#pagination": .pagination a
- download_page:
-  regex: dataset/
-  resources:
-   "http://europeandataportal.projekt-opal.de/dataset/$label":
+    "http://projekt-opal.de/dataset#link": .dataset-list h3 a
+
+
+ categories-page:
+  regex: groups/
+  resources: 
+   "http://projekt-opal.de/dataset/$label":
     "http://purl.org/dc/terms/title": .secondary section .heading:eq(0)
     "http://purl.org/dc/terms/description": .notes p
-    "dcat:distribution": l(http://europeandataportal.projekt-opal.de/distribution/$label*)
+    "http://www.w3.org/ns/dcat#distribution": l(http://projekt-opal.de/distribution/$label*)
     "http://purl.org/dc/terms/issued": table tr:contains(Created) td
-    "dcat:theme": l(http://europeandataportal.projekt-opal.de/theme-$label)
-    "http://purl.org/dc/terms/publisher": l(http://europeandataportal.projekt-opal.de/agent/$label)
+    "http://www.w3.org/ns/dcat#theme": res(.media-grid h3)
+    "http://purl.org/dc/terms/publisher": l(http://projekt-opal.de/agent/$label)
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": l(http://www.w3.org/ns/dcat#Dataset)
+    "http://www.w3.org/ns/dcat#landingPage": l($uri)
+    "http://www.w3.org/ns/dcat#catalog": l(europeandataportal.eu)
 
-    "http://europeandataportal.projekt-opal.de/agent/$label":
-     "http://xmlns.com/foaf/0.1/name": .additional-info table tr:contains(Identifier) td
+    "http://projekt-opal.de/agent/$label":
+     "http://xmlns.com/foaf/0.1/homepage": .additional-info table tr:contains(Identifier) td
      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": l(http://xmlns.com/foaf/0.1/Agent)
 
-    "http://europeandataportal.projekt-opal.de/theme/$label":
-     "http://www.w3.org/2004/02/skos/core#prefLabel": .tag-list li
-     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": l(http://www.w3.org/2004/02/skos/core#Concept)
-
-    "http://europeandataportal.projekt-opal.de/distribution/$label": 
+    "http://projekt-opal.de/distribution/$label": 
      "http://www.w3.org/ns/dcat#downloadURL*": .resource-item:not(:contains(wfs)):not(:contains(wms)):not(:contains(FTP)) [title*=go to resource]
      "http://www.w3.org/ns/dcat#accessURL*": .resource-item:contains(wms),a:contains(wfs),a:contains(FTP) [title*=go to resource]
      "http://purl.org/dc/terms/license": .license p a:not([rel])
      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": l(http://www.w3.org/ns/dcat#Distribution)
+
+ dataset-page:
+  regex: dataset/
+  resources:
+   "http://projekt-opal.de/category/$label": 
+     "http://projekt-opal.de/category": .nav-tabs li:eq(1) a
