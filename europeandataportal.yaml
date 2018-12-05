@@ -1,7 +1,7 @@
 file_descriptor:
  check:
   domain: europeandataportal.eu
-  ignore-request: true
+  ignore-request: false
   static-resources:
    "Environment":
      http://projeckt-opal.de/theme/europeandataportal/environment:
@@ -61,7 +61,7 @@ file_descriptor:
   resources: 
    "$uri":
     "http://projekt-opal.de/dataset#link": .dataset-list h3 a
-
+    "http://projekt-opal.de/dataset#pagination": .pagination a
 
  categories-page:
   regex: groups/
