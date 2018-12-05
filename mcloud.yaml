@@ -1,7 +1,7 @@
 file_descriptor:
  check:
   domain: mcloud.de
-  ignore-request: true
+  ignore-request: false
   static-resources:
    "Klima und Wetter":
      http://projeckt-opal.de/theme/mcloud/climateAndWeather:
@@ -42,14 +42,15 @@ file_descriptor:
     "http://purl.org/dc/terms/description": .main-text
     "http://www.w3.org/ns/dcat#distribution": l(http://projekt-opal.de/distribution/$label*)
     "http://purl.org/dc/terms/issued": div.detail-card p:nth-of-type(2) span
-    "http://www.w3.org/ns/dcat#theme": res(.detail-card span:eq(2))
+    "http://www.w3.org/ns/dcat#theme": res(.detail-card span:eq(2)*)
     "http://purl.org/dc/terms/publisher": l(http://projekt-opal.de/agent/$label)
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": l(http://www.w3.org/ns/dcat#Dataset)
     "http://www.w3.org/ns/dcat#landingPage": l($uri)
     "http://www.w3.org/ns/dcat#catalog": l(mcloud.de)
 
     "http://projekt-opal.de/agent/$label":
-     "http://xmlns.com/foaf/0.1/name": div.detail-card p .tag-date a
+     "http://xmlns.com/foaf/0.1/homepage": div.detail-card p .tag-date a
+     "http://xmlns.com/foaf/0.1/name": div.detail-card p:eq(1) span 
      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": l(http://xmlns.com/foaf/0.1/Agent)
 
     "http://projekt-opal.de/distribution/$label": 
