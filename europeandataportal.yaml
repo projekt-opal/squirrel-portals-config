@@ -65,20 +65,31 @@ file_descriptor:
 
  categories-page:
   regex: groups/
-  resources: 
+  resources:
+   "http://projekt-opal.de/category/$label": 
+    "http://www.w3.org/ns/dcat#theme": res(.media-grid h3)
+   
+
+ dataset-page:
+  regex: dataset/
+  resources:
+   "http://projekt-opal.de/category/$label": 
+    "http://projekt-opal.de/category": .nav-tabs li:eq(1) a
+
    "http://projekt-opal.de/dataset/$label":
     "http://purl.org/dc/terms/title": .secondary section .heading:eq(0)
     "http://purl.org/dc/terms/description": .notes p
     "http://www.w3.org/ns/dcat#distribution": l(http://projekt-opal.de/distribution/$label*)
     "http://purl.org/dc/terms/issued": table tr:contains(Created) td
-    "http://www.w3.org/ns/dcat#theme": res(.media-grid h3)
+    "http://www.w3.org/ns/dcat#theme": l(http://projekt-opal.de/category/$label)
     "http://purl.org/dc/terms/publisher": l(http://projekt-opal.de/agent/$label)
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": l(http://www.w3.org/ns/dcat#Dataset)
     "http://www.w3.org/ns/dcat#landingPage": l($uri)
     "http://www.w3.org/ns/dcat#catalog": l(europeandataportal.eu)
 
     "http://projekt-opal.de/agent/$label":
-     "http://xmlns.com/foaf/0.1/homepage": .additional-info table tr:contains(Identifier) td
+     "http://xmlns.com/foaf/0.1/homepage": .additional-info table tr:contains(Publisher) td li:eq(0)
+     "http://xmlns.com/foaf/0.1/name": .additional-info table tr:contains(Publisher) td li:eq(1)
      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": l(http://xmlns.com/foaf/0.1/Agent)
 
     "http://projekt-opal.de/distribution/$label": 
@@ -86,9 +97,3 @@ file_descriptor:
      "http://www.w3.org/ns/dcat#accessURL*": .resource-item:contains(wms),a:contains(wfs),a:contains(FTP) [title*=go to resource]
      "http://purl.org/dc/terms/license": .license p a:not([rel])
      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": l(http://www.w3.org/ns/dcat#Distribution)
-
- dataset-page:
-  regex: dataset/
-  resources:
-   "http://projekt-opal.de/category/$label": 
-     "http://projekt-opal.de/category": .nav-tabs li:eq(1) a
