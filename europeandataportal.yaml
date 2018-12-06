@@ -6,55 +6,55 @@ file_descriptor:
    "Environment":
      http://projeckt-opal.de/theme/europeandataportal/environment:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Environment
+      https://www.w3.org/2000/01/rdf-schema#label: "Environment"
    "Regions and cities":
      http://projeckt-opal.de/theme/europeandataportal/regionsandcities:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Regions and cities
+      https://www.w3.org/2000/01/rdf-schema#label: "Regions and cities"
    "Government and public sector":
      http://projeckt-opal.de/theme/europeandataportal/government:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Government and public sector
+      https://www.w3.org/2000/01/rdf-schema#label: "Government and public sector"
    "Population and society":
      http://projeckt-opal.de/theme/europeandataportal/populationandsociety:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Population and society
+      https://www.w3.org/2000/01/rdf-schema#label: "Population and society"
    "Economy and finance":
      http://projeckt-opal.de/theme/europeandataportal/economy:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Economy and finance
+      https://www.w3.org/2000/01/rdf-schema#label: "Economy and finance"
    "Education, culture and sport":
      http://projeckt-opal.de/theme/europeandataportal/education:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Education, culture and sport
+      https://www.w3.org/2000/01/rdf-schema#label: "Education, culture and sport"
    "Health":
      http://projeckt-opal.de/theme/europeandataportal/health:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Health
+      https://www.w3.org/2000/01/rdf-schema#label: "Health"
    "Science and technology":
      http://projeckt-opal.de/theme/europeandataportal/scienceandtechnology:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Science and technology
+      https://www.w3.org/2000/01/rdf-schema#label: "Science and technology"
    "Transport":
      http://projeckt-opal.de/theme/europeandataportal/transport:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Transport
+      https://www.w3.org/2000/01/rdf-schema#label: "Transport"
    "Agriculture, fisheries, forestry and food":
      http://projeckt-opal.de/theme/europeandataportal/agriculture:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Agriculture, fisheries, forestry and food
+      https://www.w3.org/2000/01/rdf-schema#label: "Agriculture, fisheries, forestry and food"
    "Justice, legal system and public safety":
      http://projeckt-opal.de/theme/europeandataportal/justice:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Justice, legal system and public safety
+      https://www.w3.org/2000/01/rdf-schema#label: "Justice, legal system and public safety"
    "Energy":
      http://projeckt-opal.de/theme/europeandataportal/energy:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Energy
+      https://www.w3.org/2000/01/rdf-schema#label: "Energy"
    "International issues":
      http://projeckt-opal.de/theme/europeandataportal/international:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: International issues
+      https://www.w3.org/2000/01/rdf-schema#label: "International issues"
 
  search-result-page:
   regex: dataset?q=
