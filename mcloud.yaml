@@ -6,27 +6,27 @@ file_descriptor:
    "Klima und Wetter":
      http://projeckt-opal.de/theme/mcloud/climateAndWeather:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Klima und Wetter
+      https://www.w3.org/2000/01/rdf-schema#label: "Klima und Wetter"
    "Bahn":
      http://projeckt-opal.de/theme/mcloud/train:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Bahn
+      https://www.w3.org/2000/01/rdf-schema#label: "Bahn"
    "Straßen":
      http://projeckt-opal.de/theme/mcloud/street:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Straßen
+      https://www.w3.org/2000/01/rdf-schema#label: "Straßen"
    "Wasserstraßen und Gewässer":
      http://projeckt-opal.de/theme/mcloud/waterwaysAndWaters:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Wasserstraßen und Gewässer
+      https://www.w3.org/2000/01/rdf-schema#label: "Wasserstraßen und Gewässer"
    "Luft- und Raumfahrt":
      http://projeckt-opal.de/theme/mcloud/aerospace:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Luft- und Raumfahrt
+      https://www.w3.org/2000/01/rdf-schema#label: "Luft- und Raumfahrt"
    "Infrastruktur":
      http://projeckt-opal.de/theme/mcloud/infrastructure:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
-      https://www.w3.org/2000/01/rdf-schema#label: Infrastruktur
+      https://www.w3.org/2000/01/rdf-schema#label: "Infrastruktur"
  search-result-page:
   regex:
    - results/searchAction
@@ -34,6 +34,7 @@ file_descriptor:
   resources:
    "$uri": 
     "http://project-opal.de/paging": .search-filtered .border-left a
+    "http://sindice.com/vocab/search#pagination": .pagination a
  download_page:
   regex: results/detail
   resources:
