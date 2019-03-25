@@ -27,6 +27,10 @@ file_descriptor:
      http://projeckt-opal.de/theme/mcloud/infrastructure:
       http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
       https://www.w3.org/2000/01/rdf-schema#prefLabel: "Infrastruktur"
+   "Data-Run":
+     http://projeckt-opal.de/theme/mcloud/datarun:
+      http://www.w3.org/1999/02/22-rdf-syntax-ns#type: skos:Concept
+      https://www.w3.org/2000/01/rdf-schema#prefLabel: "Data-Run"
  search-result-page:
   regex:
    - results/searchAction
