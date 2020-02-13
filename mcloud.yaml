@@ -14,4 +14,4 @@ file_descriptor:
   regex: results/detail
   resources:
    "$uri":
-    "rdf/xml": .matadata-table a
+    "http://project-opal.de/downloadlink": .matadata-table a
