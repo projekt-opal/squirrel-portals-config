@@ -8,10 +8,10 @@ file_descriptor:
    - results/search
   resources:
    "$uri": 
-    "http://project-opal.de/paging": .search-filtered .border-left a
+    "http://project-opal.de/scraper#Pagination": .search-filtered .border-left a
     "http://sindice.com/vocab/search#pagination": .pagination a
  download_page:
   regex: results/detail
   resources:
    "$uri":
-    "http://project-opal.de/downloadlink": .matadata-table a
+    "http://project-opal.de/scraper#DownloadLink": .matadata-table a
