@@ -6,12 +6,13 @@ file_descriptor:
   regex:
    - results/searchAction
    - results/search
+   - results/suche
   resources:
    "$uri": 
-    "http://project-opal.de/scraper#Pagination": .search-filtered .border-left a
-    "http://sindice.com/vocab/search#pagination": .pagination a
+    "http://squirrel.dice_research/dataset#Link": .search-filtered .border-left a
+    "http://squirrel.dice_research/dataset#Page": .pagination a
  download_page:
-  regex: results/detail
+  regex: detail
   resources:
    "$uri":
-    "http://project-opal.de/scraper#DownloadLink": .matadata-table a
+    "http://squirrel.dice_research/dataset#File": .matadata-table a
